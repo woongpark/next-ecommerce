@@ -3,10 +3,22 @@ import PageIntro from '../components/page-intro';
 import ProductsFeatured from '../components/products-featured';
 import Footer from '../components/footer';
 import Subscribe from '../components/subscribe';
+import Script from 'next/script'
 
 const IndexPage = () => {
+  const loaded = (e) => {
+    document.addEventListener('readystatechange', (event) => {
+      if(document.readyState === 'complete') {
+        window.VcommerceWidget('init')
+      }
+    })
+  }
   return (
     <Layout>
+      <Script
+        src="https://vcommerce-dev.kiswe.com/vcommerce-loader.js?roomId=KUPEgxcmeVfFMYXtZVvI"
+        onLoad={loaded}
+      />
       <PageIntro />
 
       <section className="featured">
