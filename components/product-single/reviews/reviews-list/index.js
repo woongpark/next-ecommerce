@@ -8,8 +8,8 @@ const ReviewsList = ({ reviews }) => {
 
   return (
     <section className="reviews-list">
-      {reviews.map(review => (
-        <div className="review-item">
+      {reviews.map((review, i) => (
+        <div className="review-item" key={i}>
           <div className="review__avatar">
             <img src={ review.avatar } alt="avatar" />
           </div>

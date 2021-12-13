@@ -78,8 +78,8 @@ const Content = ({ product }) => {
             <div className="select-wrapper">
               <select onChange={onSelectChange}>
                 <option>Choose size</option>
-                {productsSizes.map(type => (
-                  <option value={type.label}>{type.label}</option>
+                {productsSizes.map((type, i) => (
+                  <option key={i} value={type.label}>{type.label}</option>
                 ))}
               </select>
             </div>
