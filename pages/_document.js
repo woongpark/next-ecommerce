@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
-
+import Document, { Head, Main, NextScript, Html } from 'next/document'
 import { GA_TRACKING_ID } from '../utils/gtag';
 
 export default class CustomDocument extends Document {
@@ -21,10 +20,24 @@ export default class CustomDocument extends Document {
     const { isProduction } = this.props
 
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
-
           {/* We only want to add the scripts if in production */}
+          
+          <script type="text/javascript" src="https://localhost:8080/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&roomId=j8VJ9jwFoqXsIKWlIPPq"></script>
+          <script 
+            dangerouslySetInnerHTML={{
+              __html: `
+                if(window.location.pathname === '/live-commerce') {
+                  document.addEventListener('readystatechange', (event) => {
+                    if(document.readyState === 'complete') {
+                      window.VcommerceWidget && window.VcommerceWidget('init')
+                    }
+                  });
+                }
+              `,
+            }}
+          />
           {isProduction && (
             <Fragment>
               {/* Global Site Tag (gtag.js) - Google Analytics */}
@@ -52,7 +65,7 @@ export default class CustomDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }

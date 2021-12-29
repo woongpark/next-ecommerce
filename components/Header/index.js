@@ -59,6 +59,7 @@ const Header = ({ isErrorPage }) => {
           </Link>
           <a href="#">Inspiration</a>
           <a href="#">Rooms</a>
+          <a href="/live-commerce">Live Commerce</a>
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 
