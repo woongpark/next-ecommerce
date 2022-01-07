@@ -24,7 +24,7 @@ export default class CustomDocument extends Document {
         <Head>
           {/* We only want to add the scripts if in production */}
           
-          <script type="text/javascript" src="https://localhost:8080/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&roomId=j8VJ9jwFoqXsIKWlIPPq"></script>
+          <script type="text/javascript" src="https://vcommerce-dev.kiswe.com/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&roomId=j8VJ9jwFoqXsIKWlIPPq"></script>
           <script 
             dangerouslySetInnerHTML={{
               __html: `
