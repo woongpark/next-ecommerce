@@ -23,8 +23,8 @@ export default class CustomDocument extends Document {
         <Head>
           {/* We only want to add the scripts if in production */}
           {isProduction 
-            ? <script type="text/javascript" src={`https://vcommerce-dev.kiswe.com/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA`}></script> 
-            : <script type="text/javascript" src={`https://localhost:8080/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA`}></script>
+            ? <script type="text/javascript" src={`https://vcommerce-dev.kiswe.com/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&teamSlug=sdkdemoshop`}></script> 
+            : <script type="text/javascript" src={`https://localhost:8080/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&teamSlug=sdkdemoshop`}></script>
           }
           <script 
             dangerouslySetInnerHTML={{
