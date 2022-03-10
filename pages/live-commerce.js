@@ -1,14 +1,13 @@
-import { useEffect } from 'react'
+import Layout from '../layouts/Main';
+import Footer from '../components/footer';
 
 const LiveCommerce = () => {
-  useEffect(() => {
-    // document.addEventListener('readystatechange', (event) => {
-    //   if(document.readyState === 'complete') {
-    //     window.VcommerceWidget('init')
-    //   }
-    // });
-  })
-  return <></>
+  return (
+    <Layout>
+      <section id='MkJu7TFX9pXXombqtVUA'></section>
+      <Footer />
+    </Layout>
+  )
 }
 
   
