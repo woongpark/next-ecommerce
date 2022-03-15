@@ -26,19 +26,6 @@ export default class CustomDocument extends Document {
             ? <script type="text/javascript" src={`https://vcommerce-dev.kiswe.com/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&teamSlug=sdkdemoshop`}></script> 
             : <script type="text/javascript" src={`https://localhost:8080/vcommerce-loader.js?teamId=MkJu7TFX9pXXombqtVUA&teamSlug=sdkdemoshop`}></script>
           }
-          <script 
-            dangerouslySetInnerHTML={{
-              __html: `
-                if(window.location.pathname === '/live-commerce') {
-                  document.addEventListener('readystatechange', (event) => {
-                    if(document.readyState === 'complete') {
-                      window.VcommerceWidget && window.VcommerceWidget('init')
-                    }
-                  });
-                }
-              `,
-            }}
-          />
           {isProduction && (
             <Fragment>
               {/* Global Site Tag (gtag.js) - Google Analytics */}
