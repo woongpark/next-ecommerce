@@ -18,7 +18,7 @@ const LiveCommerce = () => {
   function setLandingPage() {
     if(window.VcommerceWidget) {
       setUrl(window.VcommerceWidget.landingUrl)
-      window.VcommerceWidget.landingIFrame = landing.current; 
+      window.VcommerceWidget.landingIFrame = landing.current;
     }
   }
   const iframeStyle = {
